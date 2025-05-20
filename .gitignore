@@ -1,5 +1,6 @@
 **/node_modules
-**/prisma/client
+**/prisma/client/*
+**/prisma/migrations
 
 **/.env*
 !**/.env.example

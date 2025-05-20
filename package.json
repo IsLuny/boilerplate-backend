@@ -5,10 +5,12 @@
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
-    "env:local": "chmod +x ./export-env.sh && sh ./export-env.sh",
     "build": "tsup",
     "start": "node out/index.js",
-    "dev": "./syenv.sh --debug --env-file .env.local --var NODE_ENV=local -- tsx --watch src/index.ts"
+    "dev": "./syenv.sh --debug --env-file .env --var NODE_ENV=local -- tsx --watch src/index.ts",
+    "docker:up": "./syenv.sh --env-file .env -- docker compose -f docker-compose.yml up -d",
+    "prisma:generate": "prisma generate --schema=prisma/schema.prisma",
+    "prisma:dev": "./syenv.sh --env-file .env -- prisma migrate dev --schema=prisma/schema.prisma && yarn prisma:generate"
   },
   "devDependencies": {
     "@types/node": "^22.15.19",
@@ -28,6 +30,7 @@
     "@fastify/swagger": "^9.5.0",
     "@fastify/swagger-ui": "^5.2.2",
     "@isluny/logger": "github:IsLuny/logger#main",
+    "@prisma/client": "6.8.2",
     "axios": "^1.8.4",
     "chalk": "^5.4.1",
     "dotenv": "^16.5.0",
