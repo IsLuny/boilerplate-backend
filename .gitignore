@@ -2,6 +2,7 @@
 **/prisma/client
 
 **/.env*
+!**/.env.example
 **/out/
 commitmsg.txt
 gource*

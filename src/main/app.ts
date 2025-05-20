@@ -3,8 +3,8 @@ import { HttpServer } from '@/infra/http/server'
 
 const createApp = () => {
 	const app = new HttpServer({
-		hostname: env.HOST,
-		port: env.PORT,
+		hostname: env.SERVER_HOST,
+		port: env.SERVER_PORT,
 
 		fastify: {
 			logger: true,
