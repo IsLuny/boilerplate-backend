@@ -109,5 +109,5 @@ if [ ${#COMMAND[@]} -eq 0 ]; then
   exit 1
 else
   $DEBUG && echo "🚀 Executing command: ${COMMAND[*]}"
-  exec "${COMMAND[@]}" & 
+  exec "${COMMAND[@]}"
 fi
