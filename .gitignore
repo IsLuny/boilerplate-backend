@@ -1,0 +1,7 @@
+**/node_modules
+**/prisma/client
+
+**/.env*
+**/out/
+commitmsg.txt
+gource*
