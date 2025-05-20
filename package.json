@@ -5,9 +5,10 @@
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
+    "env:local": "chmod +x ./export-env.sh && sh ./export-env.sh",
     "build": "tsup",
     "start": "node out/index.js",
-    "dev": "tsx --watch --env-file .env.local src/index.ts"
+    "dev": "./syenv.sh --debug --env-file .env.local --var NODE_ENV=local -- tsx --watch src/index.ts"
   },
   "devDependencies": {
     "@types/node": "^22.15.19",
