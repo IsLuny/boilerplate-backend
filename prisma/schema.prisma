@@ -9,7 +9,7 @@ generator client {
 }
 
 model Users {
-  id   String @id @map("id")
+  id   String @id @unique @map("id")
   name String @map("name")
 
   @@map("users")

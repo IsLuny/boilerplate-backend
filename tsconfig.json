@@ -25,11 +25,12 @@
         "strictPropertyInitialization": false,
         "baseUrl": "./src",
         "paths": {
-            "@/*": ["./*"]
+            "@/*": ["./*"],
+            "@/prisma/*": ["../prisma/*"]
         }
     },
     "include": [
-        "src/**/*.ts"
+        "src/**/*.ts",
     ],
     "exclude": [
         "build",
